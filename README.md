@@ -1,24 +1,24 @@
 # payment-distribution-front
 
-This project is a Prtal challenge for a position as a frontend developer intern. 
+This project is a Prtal challenge for a position as a frontend developer intern.
 
 ## Atomic Design
 
 A form of order the components atoms until pages
 
-* Atoms: Components tinest
-* Molecules: A group of atoms
-* Organisms: A group of molecules
-* Templates: A group of organisms, is like the prototype but without information
-* Pages: A group of components with information, for example as Home, About, etc
+- Atoms: Components tinest
+- Molecules: A group of atoms
+- Organisms: A group of molecules
+- Templates: A group of organisms, is like the prototype but without information
+- Pages: A group of components with information, for example as Home, About, etc
 
 ## Tools
 
-* Vite -> Used for the project scafolding 
-* Vue 2 -> library
-* Prettier, eslint, husky -> For It have a better order of the project
-* sass -> A processador for agilize stylezed of the interfaces
-* vitest -> For the unit testing
+- Vite -> Used for the project scafolding
+- Vue 2 -> library
+- Prettier, eslint, husky -> For It have a better order of the project
+- sass -> A processador for agilize stylezed of the interfaces
+- vitest -> For the unit testing
 
 ## Recommended IDE Setup
 

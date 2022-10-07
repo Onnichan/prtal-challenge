@@ -3,10 +3,10 @@ import TemplatePayment from "../components/templates/TemplatePayment.vue";
 import OrganismPaymentBody from "../components/organisms/OrganismPaymentBody.vue";
 import OrganismPaymentHeader from "../components/organisms/OrganismPaymentHeader.vue";
 import AtomButton from "../components/atoms/AtomButton.vue";
-import AtomEditIcon from "../components/atoms/icons/AtomEditIcon.vue";
+// import AtomEditIcon from "../components/atoms/icons/AtomEditIcon.vue";
 import AtomAngleArrowDownIcon from "../components/atoms/icons/AtomAngleArrowDownIcon.vue";
-import AtomDeleteIcon from "../components/atoms/icons/AtomDeleteIcon.vue"
-import AtomPlusIcon from "../components/atoms/icons/AtomPlusIcon.vue"
+// import AtomDeleteIcon from "../components/atoms/icons/AtomDeleteIcon.vue"
+// import AtomPlusIcon from "../components/atoms/icons/AtomPlusIcon.vue"
 
 export default {
   name: "HomeView",
@@ -15,10 +15,10 @@ export default {
     OrganismPaymentBody,
     OrganismPaymentHeader,
     AtomButton,
-    AtomEditIcon,
+    // AtomEditIcon,
     AtomAngleArrowDownIcon,
-    AtomDeleteIcon,
-    AtomPlusIcon
+    // AtomDeleteIcon,
+    // AtomPlusIcon
   },
   data() {
     return {
@@ -37,7 +37,7 @@ export default {
         <AtomButton class="payment-select__button">
           <template #content>Pagos</template>
           <template #icon>
-            <AtomAngleArrowDownIcon class="payment-select__icon"/>
+            <AtomAngleArrowDownIcon class="payment-select__icon" />
           </template>
         </AtomButton>
         <div></div>
