@@ -8,7 +8,7 @@ export default {
 </script>
 <template>
   <AtomButton class="base-button">
-    <slot name=content></slot>
-    <slot name=icon></slot>
+    <slot name="content"></slot>
+    <slot name="icon"></slot>
   </AtomButton>
 </template>

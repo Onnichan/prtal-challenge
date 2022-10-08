@@ -8,7 +8,7 @@ export default {
     TemplatePayment,
     AtomText,
     AtomContainer,
-},
+  },
   data() {
     return {
       mountTotal: 182,
@@ -22,6 +22,6 @@ export default {
 <template>
   <AtomContainer>
     <AtomText tag="h1">Payment distribution</AtomText>
-    <TemplatePayment/>
+    <TemplatePayment />
   </AtomContainer>
 </template>
