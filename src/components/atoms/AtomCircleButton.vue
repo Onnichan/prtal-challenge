@@ -15,8 +15,10 @@ export default {
 };
 </script>
 <template>
-  <div
+  <button
     v-bind:style="{ width: width, height: height }"
-    class="payment-step__progress"
-  ></div>
+    class="circle-base-button"
+  >
+    <slot></slot>
+  </button>
 </template>

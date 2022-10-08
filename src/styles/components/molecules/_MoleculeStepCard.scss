@@ -8,4 +8,22 @@
     flex-direction: column;
     gap: 0.5em;
   }
+  &-actions{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+  }
+  &__input{
+    display: flex;
+    flex-direction: column;
+  }
+  &__mount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__expiration-date{
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -1,0 +1,13 @@
+.base-input{
+  padding: 5px;
+  position: relative;
+  &::after{
+    content: "UF";
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: black;
+    z-index: 2;
+  }
+}
+

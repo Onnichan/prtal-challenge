@@ -1,4 +1,13 @@
-.payment-step__progress {
+.circle-base-button {
   border-radius: 100%;
-  border: $border-circle-button solid var(--border-color-step-card);
+  border: var(--border-circle-button) solid var(--border-color-step-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.border-thin{
+    --border-circle-button: 1px;
+  }
+  &:hover{
+    cursor: pointer;
+  }
 }

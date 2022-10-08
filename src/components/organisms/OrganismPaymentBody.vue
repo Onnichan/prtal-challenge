@@ -8,9 +8,11 @@ export default {
 </script>
 <template>
   <div class="payment-card__body">
-    <MoleculeStepCard></MoleculeStepCard>
-    <MoleculeStepCard></MoleculeStepCard>
-    <MoleculeStepCard></MoleculeStepCard>
-    <MoleculeStepCard></MoleculeStepCard>
+    <MoleculeStepCard
+      v-bind="$attrs"
+      v-for="payment in $attrs.payments"
+      v-bind:key="payment.id"
+      v-bind:payment="payment"
+    ></MoleculeStepCard>
   </div>
 </template>

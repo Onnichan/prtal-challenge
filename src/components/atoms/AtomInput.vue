@@ -10,5 +10,5 @@ export default {
 };
 </script>
 <template>
-  <input v-bind:type="type" />
+  <input v-bind:type="type" class="base-input"/>
 </template>
