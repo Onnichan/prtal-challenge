@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &.border-thin{
+  &.border-thin {
     --border-circle-button: 1px;
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }

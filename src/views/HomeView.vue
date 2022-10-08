@@ -50,9 +50,9 @@ export default {
     addPayments(payment) {
       this.payments.push(payment);
     },
-    replacePayments(payments){
+    replacePayments(payments) {
       this.payments = payments;
-    }
+    },
   },
 };
 </script>

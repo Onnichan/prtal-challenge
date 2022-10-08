@@ -8,21 +8,21 @@
     flex-direction: column;
     gap: 0.5em;
   }
-  &-actions{
+  &-actions {
     display: flex;
     flex-direction: column;
     row-gap: 1em;
   }
-  &__input{
+  &__input {
     display: flex;
     flex-direction: column;
   }
-  &__mount{
+  &__mount {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  &__expiration-date{
+  &__expiration-date {
     display: flex;
     flex-direction: column;
   }

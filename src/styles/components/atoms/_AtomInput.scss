@@ -1,7 +1,7 @@
-.base-input{
+.base-input {
   padding: 5px;
   position: relative;
-  &::after{
+  &::after {
     content: "UF";
     position: absolute;
     right: 10px;
@@ -10,4 +10,3 @@
     z-index: 2;
   }
 }
-
