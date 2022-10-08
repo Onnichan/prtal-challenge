@@ -10,7 +10,16 @@ export default {
 </script>
 <template>
   <div class="payment-card">
-    <OrganismPaymentHeader> </OrganismPaymentHeader>
-    <OrganismPaymentBody class="payment-card__body"></OrganismPaymentBody>
+    <OrganismPaymentHeader
+      v-bind:mount="$attrs.mount"
+      v-bind:editing="$attrs.editing"
+      v-bind:coin="$attrs.coin"
+      v-bind="$listeners"
+    >
+    </OrganismPaymentHeader>
+    <OrganismPaymentBody
+      class="payment-card__body"
+      v-bind="$attrs"
+    ></OrganismPaymentBody>
   </div>
 </template>

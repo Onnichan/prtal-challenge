@@ -6,6 +6,7 @@ export const usePaymentStore = defineStore({
     totalMount: 182,
     numberOfSteps: 0,
     coin: "UF",
+    editing: false,
   }),
   getters: {
     // doubleCount: (state) => state.counter * 2,
@@ -14,5 +15,8 @@ export const usePaymentStore = defineStore({
     addSteps() {
       this.numberOfSteps++;
     },
+    setEditing(){
+      this.editing= !this.editing;
+    }
   },
 });

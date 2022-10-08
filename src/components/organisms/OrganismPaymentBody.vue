@@ -9,5 +9,8 @@ export default {
 <template>
   <div class="payment-card__body">
     <MoleculeStepCard></MoleculeStepCard>
+    <MoleculeStepCard></MoleculeStepCard>
+    <MoleculeStepCard></MoleculeStepCard>
+    <MoleculeStepCard></MoleculeStepCard>
   </div>
 </template>

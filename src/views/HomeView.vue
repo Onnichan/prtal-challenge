@@ -12,16 +12,27 @@ export default {
   data() {
     return {
       mountTotal: 182,
-      numberOfSteps: 0,
+      numberOfSteps: 4,
       coin: "UF",
+      editing: false,
     };
   },
-  methods: {},
+  methods: {
+    editingHandle() {
+      this.editing = !this.editing;
+    },
+  },
 };
 </script>
 <template>
   <AtomContainer>
     <AtomText tag="h1">Payment distribution</AtomText>
-    <TemplatePayment />
+    <TemplatePayment
+      v-bind:steps="numberOfSteps"
+      v-bind:mount="mountTotal"
+      v-bind:coin="coin"
+      v-bind:editing="editing"
+      @click="editingHandle"
+    />
   </AtomContainer>
 </template>
