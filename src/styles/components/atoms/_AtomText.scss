@@ -1,0 +1,22 @@
+.base-text {
+  color: var(--text-color);
+  padding-right: .5em;
+  &.text-lg{
+    font-size: larger;
+  }
+  &.text-sm{
+    font-size: 14px;
+  }
+  &.font-bold{
+    font-weight: 600;
+  }
+  &.text-center{
+    text-align: var(--text-aligment);
+  }
+  &.bg-neutral-400 {
+    --text-color: #{$bg-neutral-400};
+  }
+  &.bg-neutral-900 {
+    --text-color: #{$bg-neutral-900};
+  }
+}

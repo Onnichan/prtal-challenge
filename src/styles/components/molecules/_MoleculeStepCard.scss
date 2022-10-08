@@ -1,0 +1,11 @@
+.payment-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  align-items: center;
+  &-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}

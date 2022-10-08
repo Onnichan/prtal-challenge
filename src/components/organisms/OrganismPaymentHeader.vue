@@ -25,11 +25,12 @@ export default {
       <MoleculeIconButton class="payment-action__edit-button">
         <template #content>Editar</template>
         <template #icon>
-          <AtomEditIcon class="payment-action__edit-icon" />
+          <AtomEditIcon class="payment-action__edit-icon" width="12" height="12"/>
         </template>
       </MoleculeIconButton>
       <div class="payment-action__mount-wrapper">
-        <AtomText>Por cobrar 182UF</AtomText>
+        <AtomText class="bg-neutral-400">Por cobrar</AtomText>
+        <AtomText class="bg-neutral-900 font-bold">182UF</AtomText>
       </div>
     </div>
   </div>

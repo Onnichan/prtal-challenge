@@ -1,7 +1,23 @@
+<script>
+export default{
+  props:{
+    width: {
+      type: String,
+      required: false,
+      default: "20",
+    },
+    height: {
+      type: String,
+      required: false,
+      default: "20",
+    }
+  }
+}
+</script>
 <template>
   <svg
-    width="20"
-    height="20"
+    v-bind:width="width"
+    v-bind:height="height"
     viewBox="0 0 20 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
