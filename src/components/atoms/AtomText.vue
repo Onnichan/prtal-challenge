@@ -1,3 +1,8 @@
+<template>
+  <component v-bind:is="tag">
+    <slot></slot>
+  </component>
+</template>
 <script>
 export default {
   props: {
@@ -9,8 +14,3 @@ export default {
   },
 };
 </script>
-<template>
-  <div>
-    <component v-bind:is="tag" class="" />
-  </div>
-</template>

@@ -1,6 +1,7 @@
-<template functional>
-  <button v-bind:class="$attrs">
-    <slot name="content" />
-    <slot name="icon" />
+<template>
+  <button>
+    <slot name="content"></slot>
+    <slot name="icon"></slot>
+    <slot></slot>
   </button>
 </template>

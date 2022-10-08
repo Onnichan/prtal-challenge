@@ -1,0 +1,12 @@
+.payment-card__header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $padding-payment-card;
+  border-bottom: 1px solid var(--color-bottom-border-header-card);
+}
+
+.payment-header__actions{
+  display: flex;
+}
+
