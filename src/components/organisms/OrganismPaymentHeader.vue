@@ -12,7 +12,7 @@ export default {
     AtomAngleArrowDownIcon,
     AtomText,
     AtomButton,
-  }
+  },
 };
 </script>
 <template>
@@ -24,7 +24,9 @@ export default {
       </template>
     </MoleculeIconButton>
     <div class="payment-header__actions">
-      <AtomButton v-if="$attrs.editing" class="bg-primary-500">Guardar</AtomButton>
+      <AtomButton v-if="$attrs.editing" class="bg-primary-500"
+        >Guardar</AtomButton
+      >
       <MoleculeIconButton v-else class="payment-action__edit-button">
         <template #content>Editar</template>
         <template #icon>
@@ -37,7 +39,9 @@ export default {
       </MoleculeIconButton>
       <div class="payment-action__mount-wrapper">
         <AtomText class="bg-neutral-400">Por cobrar</AtomText>
-        <AtomText class="bg-neutral-900 font-bold">{{$attrs.mount}} {{$attrs.coin}}</AtomText>
+        <AtomText class="bg-neutral-900 font-bold"
+          >{{ $attrs.mount }} {{ $attrs.coin }}</AtomText
+        >
       </div>
     </div>
   </div>

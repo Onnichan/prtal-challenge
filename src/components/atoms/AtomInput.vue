@@ -4,10 +4,10 @@ export default {
     type: {
       type: String,
       required: false,
-      default: "text"
-    }
-  }
-}
+      default: "text",
+    },
+  },
+};
 </script>
 <template>
   <input v-bind:type="type" />

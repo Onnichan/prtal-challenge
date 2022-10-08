@@ -15,8 +15,8 @@ export const usePaymentStore = defineStore({
     addSteps() {
       this.numberOfSteps++;
     },
-    setEditing(){
-      this.editing= !this.editing;
-    }
+    setEditing() {
+      this.editing = !this.editing;
+    },
   },
 });
