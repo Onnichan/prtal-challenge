@@ -3,11 +3,11 @@
   color: var(--button-color);
   border: none;
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }

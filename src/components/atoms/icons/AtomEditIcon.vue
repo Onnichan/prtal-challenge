@@ -1,6 +1,6 @@
 <script>
-export default{
-  props:{
+export default {
+  props: {
     width: {
       type: String,
       required: false,
@@ -10,9 +10,9 @@ export default{
       type: String,
       required: false,
       default: "20",
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <template>
   <svg

@@ -25,7 +25,11 @@ export default {
       <MoleculeIconButton class="payment-action__edit-button">
         <template #content>Editar</template>
         <template #icon>
-          <AtomEditIcon class="payment-action__edit-icon" width="12" height="12"/>
+          <AtomEditIcon
+            class="payment-action__edit-icon"
+            width="12"
+            height="12"
+          />
         </template>
       </MoleculeIconButton>
       <div class="payment-action__mount-wrapper">
