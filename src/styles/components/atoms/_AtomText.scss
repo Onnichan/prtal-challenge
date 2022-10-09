@@ -13,10 +13,10 @@
   &.text-center {
     text-align: var(--text-aligment);
   }
-  &.bg-neutral-400 {
+  &.text-neutral-400 {
     --text-color: #{$bg-neutral-400};
   }
-  &.bg-neutral-900 {
+  &.text-neutral-900 {
     --text-color: #{$bg-neutral-900};
   }
 }

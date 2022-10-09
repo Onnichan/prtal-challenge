@@ -2,6 +2,7 @@
 import AtomCircleButton from "../atoms/AtomCircleButton.vue";
 import AtomText from "../atoms/AtomText.vue";
 import AtomInput from "../atoms/AtomInput.vue";
+import MoleculeIconInput from "../molecules/MolecuelconInput.vue";
 import { useModalStore } from "../../stores/modal.store";
 import { mapActions } from "pinia";
 
@@ -10,17 +11,33 @@ export default {
     AtomCircleButton,
     AtomText,
     AtomInput,
+    MoleculeIconInput,
   },
   methods: {
     ...mapActions(useModalStore, ["setOpen"]),
   },
-  props: ["payment", "coin", "mount", "editing", "steps"],
+  props: {
+    payment: String,
+    coin: {
+      type: String,
+      required: false,
+      default: "UF",
+    },
+    mount: {
+      type: Number,
+      required: false,
+    },
+    editing: {
+      type: Boolean,
+    },
+    steps: Number,
+  },
 };
 </script>
 <template>
   <div class="payment-step">
     <div class="payment-step__progress-wrapper">
-      <AtomCircleButton width="50px" height="50px" @click="setOpen(true)" />
+      <AtomCircleButton width="60px" height="60px" @click="setOpen(true)" />
     </div>
     <div class="payment-step-fields" v-if="!editing">
       <AtomText class="payment-step__field text-center font-bold text-lg">{{
@@ -35,21 +52,43 @@ export default {
     </div>
     <div class="payment-step-actions" v-else>
       <div class="payment-step__input">
-        <AtomInput v-bind:value="payment.name"></AtomInput>
-        <AtomInput v-bind:value="payment.mount"></AtomInput>
+        <AtomInput
+          v-bind:value="payment.name ? payment.name : 'Nuevo'"
+          class="font-bold"
+          v-bind:style="{ fontSize: '20px', marginBottom: '.8em' }"
+        ></AtomInput>
+        <MoleculeIconInput>
+          <template #input>
+            <AtomInput
+              :value="payment.mount ? payment.mount : 0"
+              class="font-bold"
+              v-bind:style="{ fontSize: '14px' }"
+            ></AtomInput>
+          </template>
+          <template #coin>
+            <AtomText class="text-neutral-400">{{
+              coin ? coin : "UF"
+            }}</AtomText>
+          </template>
+        </MoleculeIconInput>
       </div>
       <div class="payment-step__mount">
-        <AtomCircleButton width="30px" height="30px" class="border-thin"
+        <AtomCircleButton
+          width="30px"
+          height="30px"
+          class="border-thin"
+          v-bind:style="{ fontSize: '30px' }"
           >-</AtomCircleButton
         >
-        <AtomText>{{ payment.percentage }}%</AtomText>
+        <AtomText>{{ payment.percentage ? payment.percentage : 0 }}%</AtomText>
         <AtomCircleButton width="30px" height="30px" class="border-thin"
           >+</AtomCircleButton
         >
       </div>
       <div class="payment-step__expiration-date">
-        <AtomText>Vence</AtomText>
-        <AtomText>{{ payment.expirationDate }}</AtomText>
+        <AtomText class="text-neutral-400">Vence</AtomText>
+        <input type="date" name="" id="" />
+        <!-- <AtomText>{{ payment.expirationDate }}</AtomText> -->
       </div>
     </div>
   </div>

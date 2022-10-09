@@ -51,8 +51,8 @@ export default {
         </template>
       </MoleculeIconButton>
       <div class="payment-action__mount-wrapper">
-        <AtomText class="bg-neutral-400">Por cobrar</AtomText>
-        <AtomText class="bg-neutral-900 font-bold"
+        <AtomText class="text-neutral-400">Por cobrar</AtomText>
+        <AtomText class="text-neutral-900 font-bold"
           >{{ mount }} {{ coin }}</AtomText
         >
       </div>

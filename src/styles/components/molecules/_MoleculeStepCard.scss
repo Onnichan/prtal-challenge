@@ -20,6 +20,7 @@
   &__mount {
     display: flex;
     justify-content: center;
+    column-gap: 1em;
     align-items: center;
   }
   &__expiration-date {

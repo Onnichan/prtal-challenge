@@ -43,8 +43,6 @@ export default {
       v-bind:editing="editing"
       v-bind:payments="payments"
     />
-    <transition>
-      <OrganismModal v-if="open" v-bind:states="states" />
-    </transition>
+    <OrganismModal v-if="open" v-bind:states="states" />
   </AtomContainer>
 </template>
