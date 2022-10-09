@@ -30,8 +30,11 @@ export default {
       </div>
       <div class="modal__body">
         <AtomText>Selecciona el estado en que se encuentra el pago</AtomText>
-        <label v-bind:style="{margin: '10px 0'}">Estado </label>
-        <AtomSelect v-bind:options="states" v-bind:style="{width: '37%'}"></AtomSelect>
+        <label v-bind:style="{ margin: '10px 0' }">Estado </label>
+        <AtomSelect
+          v-bind:options="states"
+          v-bind:style="{ width: '37%' }"
+        ></AtomSelect>
       </div>
       <div class="modal__footer">
         <MoleculeIconButton>
