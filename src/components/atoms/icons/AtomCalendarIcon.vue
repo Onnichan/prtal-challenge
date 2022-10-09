@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 export default {
   props: {
     width: {
@@ -12,11 +12,12 @@ export default {
       default: "16",
     },
   },
-}; -->
+};
+</script>
 <template>
   <svg
-    width="16"
-    height="16"
+    v-bind:width="width"
+    v-bind:height="height"
     viewBox="0 0 16 16"
     fill="none"
   >
