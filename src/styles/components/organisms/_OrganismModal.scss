@@ -10,6 +10,7 @@
   flex-direction: column;
   padding: 1.5em;
   gap: 1em;
+  z-index: 20;
   &__header {
     // padding: 1em;
   }
@@ -22,9 +23,10 @@
     display: flex;
     justify-content: end;
   }
+
 }
 
-.modal::after {
+.modal-mask {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -33,6 +35,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
+}
+
+.modal-mask:hover{
+  cursor: pointer;
 }
 
 @media (min-width: 750px) {
