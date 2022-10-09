@@ -12,7 +12,7 @@ export default {
     TemplatePayment,
     AtomText,
     AtomContainer,
-    OrganismModal
+    OrganismModal,
   },
   computed: {
     ...mapState(usePaymentStore, [
@@ -21,9 +21,9 @@ export default {
       "editing",
       "numberOfSteps",
       "totalMount",
-      "states"
+      "states",
     ]),
-    ...mapState(useModalStore, ["open"])
+    ...mapState(useModalStore, ["open"]),
   },
   methods: {},
 };
@@ -44,7 +44,7 @@ export default {
       v-bind:payments="payments"
     />
     <transition>
-      <OrganismModal v-if="open" v-bind:states="states"/>
+      <OrganismModal v-if="open" v-bind:states="states" />
     </transition>
   </AtomContainer>
 </template>

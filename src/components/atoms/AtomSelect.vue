@@ -5,6 +5,6 @@ export default {
 </script>
 <template>
   <select>
-    <option v-for="(option, key) in options" :key="key">{{option}}</option>
+    <option v-for="(option, key) in options" :key="key">{{ option }}</option>
   </select>
 </template>
