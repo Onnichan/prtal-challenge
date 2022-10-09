@@ -18,6 +18,7 @@ export default {
   <button
     v-bind:style="{ width: width, height: height }"
     class="circle-base-button"
+    v-on="$listeners"
   >
     <slot></slot>
   </button>

@@ -7,7 +7,7 @@ export default {
 };
 </script>
 <template>
-  <AtomButton class="base-button">
+  <AtomButton class="base-button" v-on="$listeners">
     <slot name="content"></slot>
     <slot name="icon"></slot>
   </AtomButton>

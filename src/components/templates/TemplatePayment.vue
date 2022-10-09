@@ -6,20 +6,24 @@ export default {
     OrganismPaymentBody,
     OrganismPaymentHeader,
   },
+  props: ["payments", "coin", "editing", "steps", "mount"],
 };
 </script>
 <template>
   <div class="payment-card">
     <OrganismPaymentHeader
-      v-bind:mount="$attrs.mount"
-      v-bind:editing="$attrs.editing"
-      v-bind:coin="$attrs.coin"
-      v-bind="$listeners"
+      v-bind:mount="mount"
+      v-bind:editing="editing"
+      v-bind:coin="coin"
     >
     </OrganismPaymentHeader>
     <OrganismPaymentBody
       class="payment-card__body"
-      v-bind="$attrs"
+      v-bind:mount="mount"
+      v-bind:editing="editing"
+      v-bind:coin="coin"
+      v-bind:steps="steps"
+      v-bind:payments="payments"
     ></OrganismPaymentBody>
   </div>
 </template>

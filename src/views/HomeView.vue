@@ -2,58 +2,30 @@
 import TemplatePayment from "../components/templates/TemplatePayment.vue";
 import AtomText from "../components/atoms/AtomText.vue";
 import AtomContainer from "../components/atoms/AtomContainer.vue";
+import { usePaymentStore } from "../stores/payment.store";
+import { useModalStore } from "../stores/modal.store";
+import { mapState } from "pinia";
+import OrganismModal from "../components/organisms/OrganismModal.vue";
 
 export default {
   components: {
     TemplatePayment,
     AtomText,
     AtomContainer,
+    OrganismModal
   },
-  data() {
-    return {
-      mountTotal: 182,
-      numberOfSteps: 4,
-      coin: "UF",
-      editing: false,
-      payments: [
-        {
-          id: 1,
-          name: "Anticipo",
-          mount: 54.6,
-          percentage: 30,
-          state: "PAGADO",
-          expirationDate: "22/01/2022",
-        },
-        {
-          id: 2,
-          name: "Pago 1",
-          mount: 24.6,
-          percentage: 30,
-          state: "PENDIENTE",
-          expirationDate: "25/03/2022",
-        },
-        {
-          id: 3,
-          name: "Pago 2",
-          mount: 16.1,
-          percentage: 30,
-          state: "PENDIENTE",
-          expirationDate: "22/04/2022",
-        },
-      ],
-    };
+  computed: {
+    ...mapState(usePaymentStore, [
+      "payments",
+      "coin",
+      "editing",
+      "numberOfSteps",
+      "totalMount",
+      "states"
+    ]),
+    ...mapState(useModalStore, ["open"])
   },
-  methods: {
-    editingHandle() {
-      this.editing = !this.editing;
-    },
-    addPayments(payment) {
-      this.payments.push(payment);
-    },
-    replacePayments(payments) {
-      this.payments = payments;
-    },
-  },
+  methods: {},
 };
 </script>
 <template>
@@ -66,11 +38,13 @@ export default {
     >
     <TemplatePayment
       v-bind:steps="numberOfSteps"
-      v-bind:mount="mountTotal"
+      v-bind:mount="totalMount"
       v-bind:coin="coin"
       v-bind:editing="editing"
       v-bind:payments="payments"
-      @click="editingHandle"
     />
+    <transition>
+      <OrganismModal v-if="open" v-bind:states="states"/>
+    </transition>
   </AtomContainer>
 </template>

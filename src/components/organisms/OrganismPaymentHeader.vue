@@ -4,6 +4,8 @@ import AtomAngleArrowDownIcon from "../atoms/icons/AtomAngleArrowDownIcon.vue";
 import AtomEditIcon from "../atoms/icons/AtomEditIcon.vue";
 import AtomText from "../atoms/AtomText.vue";
 import AtomButton from "../atoms/AtomButton.vue";
+import { usePaymentStore } from "../../stores/payment.store";
+import { mapActions } from "pinia";
 
 export default {
   components: {
@@ -13,6 +15,13 @@ export default {
     AtomText,
     AtomButton,
   },
+  methods: {
+    ...mapActions(usePaymentStore, ["setEditing"]),
+  },
+  // computed: {
+  //   ...mapState(usePaymentStore, ["editing"]),
+  // },
+  props: ["mount", "editing", "coin"],
 };
 </script>
 <template>
@@ -24,10 +33,14 @@ export default {
       </template>
     </MoleculeIconButton>
     <div class="payment-header__actions">
-      <AtomButton v-if="$attrs.editing" class="bg-primary-500"
+      <AtomButton v-if="editing" class="bg-primary-500" @click="setEditing"
         >Guardar</AtomButton
       >
-      <MoleculeIconButton v-else class="payment-action__edit-button">
+      <MoleculeIconButton
+        v-else
+        class="payment-action__edit-button"
+        @click="setEditing"
+      >
         <template #content>Editar</template>
         <template #icon>
           <AtomEditIcon
@@ -40,7 +53,7 @@ export default {
       <div class="payment-action__mount-wrapper">
         <AtomText class="bg-neutral-400">Por cobrar</AtomText>
         <AtomText class="bg-neutral-900 font-bold"
-          >{{ $attrs.mount }} {{ $attrs.coin }}</AtomText
+          >{{ mount }} {{ coin }}</AtomText
         >
       </div>
     </div>
