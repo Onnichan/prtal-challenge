@@ -23,7 +23,6 @@
     display: flex;
     justify-content: end;
   }
-
 }
 
 .modal-mask {
@@ -37,7 +36,7 @@
   transition: opacity 0.3s ease;
 }
 
-.modal-mask:hover{
+.modal-mask:hover {
   cursor: pointer;
 }
 
