@@ -1,6 +1,8 @@
 <script>
 import MoleculeStepCard from "../molecules/MoleculeStepCard.vue";
 import AtomCircleButton from "../atoms/AtomCircleButton.vue";
+import { usePaymentStore } from "../../stores/payment.store";
+import { mapActions } from "pinia";
 
 export default {
   components: {
@@ -8,6 +10,9 @@ export default {
     AtomCircleButton,
   },
   props: ["mount", "editing", "coin", "steps", "payments"],
+  methods: {
+    ...mapActions(usePaymentStore, ["setEditing"]),
+  },
 };
 </script>
 <template>
@@ -17,9 +22,11 @@ export default {
       width="50px"
       height="50px"
       v-bind:style="{ border: 'none' }"
+      @click="setEditing(true)"
     >
       +
     </AtomCircleButton>
+    <!-- <MoleculeStepCard></MoleculeStepCard> -->
     <MoleculeStepCard
       v-else
       v-bind:mount="mount"
